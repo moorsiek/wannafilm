@@ -1,0 +1,6 @@
+html, body { margin: 0; padding: 0; }
+.b-wrapper {
+    width: 900px;
+    margin: 0 auto;
+    background: #eee;
+}

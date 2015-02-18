@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WannaFilm</title>
+</head>
+<body>
+
+<script type="text/template" id="AppTpl">
+    <div class="j-wrapper b-wrapper">
+        <a class="j-movie-add" href="#">Добавить фильмец</a>
+    </div>
+</script>
+<script type="text/template" id="MovieAddTpl">
+    <div><span>title: </span> <input class="j-field" name="title" type="text"/></div>
+    <div><span>director: </span> <input class="j-field" name="director" type="text"/></div>
+    <a href="#" class="j-save">Save</a>
+</script>
+<script type="text/template" id="MoviesTpl">
+    <ul>
+    <% movies.each(function(movie){ %>
+        <li><%= movie.get('title') %> / <%= movie.get('director') %></li>
+    <% }); %>
+    </ul>
+</script>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/backbone.js"></script>
+
+<script src="/js/wannafilm/models/Movie.js"></script>
+<script src="/js/wannafilm/views/MovieAddView.js"></script>
+<script src="/js/wannafilm/collections/MoviesCollection.js"></script>
+<script src="/js/wannafilm/views/MoviesView.js"></script>
+<script src="/js/wannafilm/views/AppView.js"></script>
+<script src="/js/wannafilm/app.js"></script>
+
+</body>
+</html>
